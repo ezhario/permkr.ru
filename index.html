@@ -82,55 +82,57 @@
 				</div>
 			</div>
 		</header>
-		<div class="slider">
-			<div class="slider_block">
-				<div class="img-container" style="background-image:url(img/home.jpg)"></div>
-				<div class="slider-organizer">
-					<div class="organizer-details">
-						<div class="message-container">
-							<div class="message">
-								<div class="message-plate">
-									<span class="address">Петропавловская, 57</span>
-									<span class="address-detail">3-х комнатная квартира с видом на Оперный театр, прекрасная планировка и ремонт</span>
-								</div>
-								<div class="message-link">
-									<a href="#">Подробнее</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="slider_block">
-				<div class="img-container" style="background-image:url(img/home2.jpg)"></div>
-				<div class="slider-organizer">
-					<div class="organizer-details">
-						<div class="message-container">
-							<div class="message">
-								<div class="message-plate">
-									<span class="address">Петропавловская, 57</span>
-									<span class="address-detail">3-х комнатная квартира с видом на Оперный театр, прекрасная планировка и ремонт</span>
-								</div>
-								<div class="message-link">
-									<a href="#">Подробнее</a>
+		<div class="slider-global">
+			<div class="slider">
+				<div class="slider_block">
+					<div class="img-container" style="background-image:url(img/home.jpg)"></div>
+					<div class="slider-organizer">
+						<div class="organizer-details">
+							<div class="message-container">
+								<div class="message">
+									<div class="message-plate">
+										<span class="address">Петропавловская, 57</span>
+										<span class="address-detail">3-х комнатная квартира с видом на Оперный театр, прекрасная планировка и ремонт</span>
+									</div>
+									<div class="message-link">
+										<a href="#">Подробнее</a>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-			<div class="slider_block">
-				<div class="img-container" style="background-image:url(img/home3.jpg)"></div>
-				<div class="slider-organizer">
-					<div class="organizer-details">
-						<div class="message-container">
-							<div class="message">
-								<div class="message-plate">
-									<span class="address">Петропавловская, 57</span>
-									<span class="address-detail">3-х комнатная квартира с видом на Оперный театр, прекрасная планировка и ремонт</span>
+				<div class="slider_block">
+					<div class="img-container" style="background-image:url(img/home2.jpg)"></div>
+					<div class="slider-organizer">
+						<div class="organizer-details">
+							<div class="message-container">
+								<div class="message">
+									<div class="message-plate">
+										<span class="address">Петропавловская, 57</span>
+										<span class="address-detail">3-х комнатная квартира с видом на Оперный театр, прекрасная планировка и ремонт</span>
+									</div>
+									<div class="message-link">
+										<a href="#">Подробнее</a>
+									</div>
 								</div>
-								<div class="message-link">
-									<a href="#">Подробнее</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="slider_block">
+					<div class="img-container" style="background-image:url(img/home3.jpg)"></div>
+					<div class="slider-organizer">
+						<div class="organizer-details">
+							<div class="message-container">
+								<div class="message">
+									<div class="message-plate">
+										<span class="address">Петропавловская, 57</span>
+										<span class="address-detail">3-х комнатная квартира с видом на Оперный театр, прекрасная планировка и ремонт</span>
+									</div>
+									<div class="message-link">
+										<a href="#">Подробнее</a>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -172,37 +174,38 @@
 		</div>
 		<footer></footer>
 		<script type="text/javascript">
-			$(document).ready(function(){
+	   $(document).ready(function(){
+	    $('.slider .slider_block').hide();
+	    $('.slider .slider_block:first').fadeIn();
+
+	    $('.arrow-next').on('click',function(){
+
+	     if ($('.slider .slider_block:visible').is(':last')) {
+	      $('.slider .slider_block:visible').fadeOut();
+	      $('.slider .slider_block:first').fadeIn();
+	     }else {
+	      $('.slider .slider_block:visible').fadeOut(function(){
+	       $(this).next().fadeIn();
+	      });
+	     }
+
+	    });
 
 
-				$('.slider .slider_block').hide();
-				$('.slider .slider_block:first').fadeIn();
+	    $('.arrow-prev').on('click',function(){
+	     if ($('.slider .slider_block:visible').is(':first')) {
+	      $('.slider .slider_block:visible').fadeOut();
+	      $('.slider .slider_block:last').fadeIn();
+	     }else {
+	      $('.slider .slider_block:visible').fadeOut(function(){
+	       $(this).prev().fadeIn();
+	      });
+	            
+	     }
+	    });
 
-				$('.arrow-next').on('click',function(){
-				      
-				     if ($('.slider .slider_block:last').is(':visible')==false) {
-				        $('.slider .slider_block:visible').nextSibbling().fadeIn();
-				     }else  $('.slider .slider_block:first').fadeIn();
+	   });
 
-				      $('.slider .slider_block').fadeOut();
-
-
-				});
-
-
-				$('.arrow-prev').on('click',function(){
-				      
-				     if ($('.slider .slider_block:first').is(':visible')==false) {
-				        $('.slider .slider_block:visible').prevSibbling().fadeIn();
-				     }else  $('.slider .slider_block:last').fadeIn();
-
-				      $('.slider .slider_block').fadeOut();
-
-
-				});
-
-				})
-
-		</script>
+	  </script>
 	</body>
 </html>
