@@ -158,90 +158,150 @@
 							<tr>
 								<td>
 									<label for="rooms">Количество комнат</label>
-									<select name="rooms">
-										<option>1 комната</option>
-										<option>2 комнаты</option>
-										<option>3 комнаты</option>
-										<option>4 комнаты</option>
-										<option>5 комнат или больше</option>
-									</select>
+									<div class="styled-select">
+										<select name="rooms">
+											<option>1 комната</option>
+											<option>2 комнаты</option>
+											<option>3 комнаты</option>
+											<option>4 комнаты</option>
+											<option>5 комнат или больше</option>
+										</select>
+									</div>
 								</td>
 								<td>
-									<label for="min_price">Минимальная цена</label>
-									<select name="min_price">
-										<option>до 500 000 рублей</option>
-										<option>от 500 000 до 1 000 000 рублей</option>
-										<option>от 1 000 000 до 2 000 000 рублей</option>
-										<option>от 2 000 000 до 3 000 000 рублей</option>
-										<option>от 3 000 000 рублей и больше</option>
-									</select>
+									<div class="td-block centerer">
+										<label for="min_price">Минимальная цена</label>
+										<div class="styled-select">
+											<select name="min_price">
+												<option>100 000 рублей</option>
+												<option>300 000 рублей</option>
+												<option>500 000 рублей</option>
+												<option>750 000 рублей</option>
+												<option>1 000 000 рублей</option>
+											</select>
+										</div>
+									</div>
 								</td>
 								<td>
-									<label for="square">Площадь, м<sup><small>2</small></sup></label>
-									<select name="square">
-										<option>от 10 до 30 м<sup><small>2</small></sup></option>
-										<option>от 30 до 50 м<sup><small>2</small></sup></option>
-										<option>от 50 до 80 м<sup><small>2</small></sup></option>
-										<option>от 80 до 110 м<sup><small>2</small></sup></option>
-										<option>от 110 м<sup><small>2</small></sup>и больше</option>
-									</select>
+									<div class="td-block righter">
+										<label for="square">Площадь, м<sup><small>2</small></sup></label>
+										<div class="styled-select">
+											<select name="square">
+												<option>от 10 до 30 м<sup><small>2</small></sup></option>
+												<option>от 30 до 50 м<sup><small>2</small></sup></option>
+												<option>от 50 до 80 м<sup><small>2</small></sup></option>
+												<option>от 80 до 110 м<sup><small>2</small></sup></option>
+												<option>от 110 м<sup><small>2</small></sup>и больше</option>
+											</select>
+										</div>
+									</div>
 								</td>
 							</tr>
 							<tr>
 								<td>
 									<label for="district">Район города</label>
-									<select name="district">
-										<option>Ленинский район</option>
-										<option>Свердловский район</option>
-										<option>Мотовилихинский район</option>
-										<option>Индустриальный район</option>
-										<option>от 110 м<sup><small>2</small></sup>и больше</option>
-									</select>
+									<div class="styled-select">
+										<select name="district">
+											<option>Ленинский район</option>
+											<option>Свердловский район</option>
+											<option>Мотовилихинский район</option>
+											<option>Индустриальный район</option>
+											<option>Кировский район</option>
+											<option>Орджоникидзевский район район</option>
+										</select>
+									</div>
 								</td>
-								<td></td>
-								<td></td>
+								<td>
+									<div class="td-block centerer">
+										<label for="max_price">Максимальная цена</label>
+										<div class="styled-select">
+											<select name="max_price">
+												<option>1 000 000 рублей</option>
+												<option>2 000 000 рублей</option>
+												<option>3 000 000 рублей</option>
+												<option>4 000 000 рублей</option>
+												<option>5 000 000 рублей</option>
+											</select>
+										</div>
+									</div>
+								</td>
+								<td>
+									<button type="submit">Подобрать</button>
+								</td>
 							</tr>
 						</tbody>
 					</table>
 				</form>
 			</div>
 			<div class="content-page">
-				<article>
-					<div class="line-mod">
-						<div class="room">однокомнатная квартира</div>
-						<div class="rayon">Индустриальный район</div>
-						<div class="square">Общая площадь = 78 м<sup><small>2</small></sup></div>
-						<div class="hata-price">3 000 рублей за м<sup><small>2</small></sup></div>
-						<br class="cf">
-					</div>
-					<div class="line-det">
-						<div class="item-addr">Ленина, 84</div>
-						<div class="item-price"><span>3 150 000 рублей</span></div>
-						<br class="cf">
-					</div>
-					<div class="line-photo-info">
-						<div class="item-photo">
-							<div class="item-slider">
-								<div class="item-photo">
-									<img src="img/item.jpg">
-									<img src="img/item2.jpg">
-									<img src="img/item3.jpg">
-									<img src="img/item4.jpg">
-								</div>
-								<div class="controls">
-									<div class="miniarrow-left"></div>
-									<div class="miniarrow-right"></div>
-								</div>
-							</div>
+				<div class="sort-item">
+					<div class="sort-title">Ленина, 84</div>
+					<div class="sort-block">
+						<div class="sort-image">
+							<img src="img/sort-item.jpg">
+							<span>Продажа</span>
 						</div>
-						<div class="item-text">
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur imperdiet arcu at sapien vulputate eleifend. Curabitur tincidunt, orci non dictum ultrices, odio lacus laoreet metus, sit amet varius sem erat eu nunc. Sed pretium commodo ante at eleifend. Suspendisse at sem vel sem tincidunt mattis. Aliquam tristique tristique libero, in mollis erat tempor non. Etiam mollis, est non eleifend malesuada, mauris felis dignissim urna, a vehicula urna tortor vel ipsum. Fusce lacinia semper purus et blandit. Nam et arcu nulla, in rutrum erat. Vivamus cursus arcu vel metus condimentum eu consectetur metus bibendum. Cras imperdiet molestie dolor a dignissim. Vivamus in magna sapien, rutrum pretium metus.<br>
-							<br>
-							Duis felis massa, ultrices at adipiscing quis, convallis sit amet turpis. Praesent sed semper ligula. Aliquam cursus neque non diam rutrum nec ultricies odio posuere. Integer felis velit, accumsan ac blandit at, mollis at velit. Mauris sed est vel enim condimentum laoreet. Integer volutpat blandit libero, sed dictum dolor gravida et. Suspendisse sit amet felis mi. Nam tempor aliquet tellus non consequat. Pellentesque ullamcorper, turpis vitae viverra tincidunt, nunc ipsum tempor elit, ut iaculis arcu orci et eros. Praesent convallis porta metus molestie aliquam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec tellus dui, molestie ut pulvinar sit amet, malesuada eu libero.
+						<div class="sort-description">
+							<span class="desc-price">3 150 000 рублей</span>
+							<span class="desc-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</span>
+							<a href="#">Подробнее</a>
 						</div>
 						<br class="cf">
 					</div>
-				</article>
+					<div class="sort-perkline">
+						<div class="sortperk-room"><span>2 комната</span></div>
+						<div class="sortperk-district"><span>Индустриальный район</span></div>
+						<div class="sortperk-square"><span>S = 78 м2</span></div>
+						<div class="sortperk-squareprice"><span>3 000 р. зв м2</span></div>
+						<br class="cf">
+					</div>
+				</div>
+				<div class="sort-item">
+					<div class="sort-title">Ленина, 84</div>
+					<div class="sort-block">
+						<div class="sort-image">
+							<img src="">
+							<span>Продажа</span>
+						</div>
+						<div class="sort-description">
+							<span class="desc-price">3 150 000 рублей</span>
+							<span class="desc-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</span>
+							<a href="#">Подробнее</a>
+						</div>
+						<br class="cf">
+					</div>
+					<div class="sort-perkline">
+						<div class="sortperk-room"><span>2 комната</span></div>
+						<div class="sortperk-district"><span>Индустриальный район</span></div>
+						<div class="sortperk-square"><span>S = 78 м2</span></div>
+						<div class="sortperk-squareprice"><span>3 000 р. зв м2</span></div>
+						<br class="cf">
+					</div>
+				</div>
+				<div class="sort-item">
+					<div class="sort-title">Ленина, 84</div>
+					<div class="sort-block">
+						<div class="sort-image">
+							<img src="">
+							<span>Продажа</span>
+						</div>
+						<div class="sort-description">
+							<span class="desc-price">3 150 000 рублей</span>
+							<span class="desc-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</span>
+							<a href="#">Подробнее</a>
+						</div>
+						<br class="cf">
+					</div>
+					<div class="sort-perkline">
+						<div class="sortperk-room"><span>2 комната</span></div>
+						<div class="sortperk-district"><span>Индустриальный район</span></div>
+						<div class="sortperk-square"><span>S = 78 м2</span></div>
+						<div class="sortperk-squareprice"><span>3 000 р. зв м2</span></div>
+						<br class="cf">
+					</div>
+				</div>
+				<br class="cf">
+				<div class="need-more">Показать еще!</div>
 			</div>
 		</div>
 		<footer></footer>
@@ -271,6 +331,7 @@
 					$(to_hide).prev().fadeIn();
 				}
 			});
+			$(".sort-item:odd").css("margin-right", "0");
 		});
 	  </script>
 	</body>
