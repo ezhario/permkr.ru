@@ -109,7 +109,7 @@
 							<div class="message-container">
 								<div class="message">
 									<div class="message-plate">
-										<span class="address">Петропавловская, 57</span>
+										<span class="address">Петропавловская, 58</span>
 										<span class="address-detail">3-х комнатная квартира с видом на Оперный театр, прекрасная планировка и ремонт</span>
 									</div>
 									<div class="message-link">
@@ -127,7 +127,7 @@
 							<div class="message-container">
 								<div class="message">
 									<div class="message-plate">
-										<span class="address">Петропавловская, 57</span>
+										<span class="address">Петропавловская, 59</span>
 										<span class="address-detail">3-х комнатная квартира с видом на Оперный театр, прекрасная планировка и ремонт</span>
 									</div>
 									<div class="message-link">
@@ -156,6 +156,48 @@
 					<table>
 						<tbody>
 							<tr>
+								<td>
+									<label for="rooms">Количество комнат</label>
+									<select name="rooms">
+										<option>1 комната</option>
+										<option>2 комнаты</option>
+										<option>3 комнаты</option>
+										<option>4 комнаты</option>
+										<option>5 комнат или больше</option>
+									</select>
+								</td>
+								<td>
+									<label for="min_price">Минимальная цена</label>
+									<select name="min_price">
+										<option>до 500 000 рублей</option>
+										<option>от 500 000 до 1 000 000 рублей</option>
+										<option>от 1 000 000 до 2 000 000 рублей</option>
+										<option>от 2 000 000 до 3 000 000 рублей</option>
+										<option>от 3 000 000 рублей и больше</option>
+									</select>
+								</td>
+								<td>
+									<label for="square">Площадь, м<sup><small>2</small></sup></label>
+									<select name="square">
+										<option>от 10 до 30 м<sup><small>2</small></sup></option>
+										<option>от 30 до 50 м<sup><small>2</small></sup></option>
+										<option>от 50 до 80 м<sup><small>2</small></sup></option>
+										<option>от 80 до 110 м<sup><small>2</small></sup></option>
+										<option>от 110 м<sup><small>2</small></sup>и больше</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<label for="district">Район города</label>
+									<select name="district">
+										<option>Ленинский район</option>
+										<option>Свердловский район</option>
+										<option>Мотовилихинский район</option>
+										<option>Индустриальный район</option>
+										<option>от 110 м<sup><small>2</small></sup>и больше</option>
+									</select>
+								</td>
 								<td></td>
 								<td></td>
 							</tr>
@@ -204,38 +246,32 @@
 		</div>
 		<footer></footer>
 		<script type="text/javascript">
-   $(document).ready(function(){
-    $('.slider .slider_block').hide();
-    $('.slider .slider_block:first').fadeIn();
+		$(document).ready(function(){
+			$('.slider .slider_block').hide();
+			$('.slider .slider_block:first').fadeIn();
 
-    $('.arrow-next').on('click',function(){
-
-     if ($('.slider .slider_block:visible').is(':last')) {
-      $('.slider .slider_block:visible').fadeOut();
-      $('.slider .slider_block:first').fadeIn();
-     }else {
-      $('.slider .slider_block:visible').fadeOut(function(){
-       $(this).next().fadeIn();
-      });
-     }
-
-    });
-
-
-    $('.arrow-prev').on('click',function(){
-     if ($('.slider .slider_block:visible').is(':first')) {
-      $('.slider .slider_block:visible').fadeOut();
-      $('.slider .slider_block:last').fadeIn();
-     }else {
-      $('.slider .slider_block:visible').fadeOut(function(){
-       $(this).prev().fadeIn();
-      });
-            
-     }
-    });
-
-   });
-
-  </script>
+			$('.arrow-next').on('click',function(){
+			var tohide = false;
+			if ($('.slider .slider_block:visible').is(':last-child')) {
+					$('.slider .slider_block:visible').fadeOut();
+					$('.slider .slider_block:first').fadeIn();
+				} else {
+					to_hide = $('.slider .slider_block:visible');
+					to_hide.fadeOut();
+					$(to_hide).next().fadeIn();
+				}
+			});
+			$('.arrow-prev').on('click',function(){
+				if ($('.slider .slider_block:visible').is(':first-child')) {
+					$('.slider .slider_block:visible').fadeOut();
+					$('.slider .slider_block:last').fadeIn();
+				} else {
+					to_hide = $('.slider .slider_block:visible');
+					to_hide.fadeOut();
+					$(to_hide).prev().fadeIn();
+				}
+			});
+		});
+	  </script>
 	</body>
 </html>

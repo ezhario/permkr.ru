@@ -109,7 +109,7 @@
 							<div class="message-container">
 								<div class="message">
 									<div class="message-plate">
-										<span class="address">Петропавловская, 57</span>
+										<span class="address">Петропавловская, 58</span>
 										<span class="address-detail">3-х комнатная квартира с видом на Оперный театр, прекрасная планировка и ремонт</span>
 									</div>
 									<div class="message-link">
@@ -127,7 +127,7 @@
 							<div class="message-container">
 								<div class="message">
 									<div class="message-plate">
-										<span class="address">Петропавловская, 57</span>
+										<span class="address">Петропавловская, 59</span>
 										<span class="address-detail">3-х комнатная квартира с видом на Оперный театр, прекрасная планировка и ремонт</span>
 									</div>
 									<div class="message-link">
@@ -174,38 +174,32 @@
 		</div>
 		<footer></footer>
 		<script type="text/javascript">
-	   $(document).ready(function(){
-	    $('.slider .slider_block').hide();
-	    $('.slider .slider_block:first').fadeIn();
+		$(document).ready(function(){
+			$('.slider .slider_block').hide();
+			$('.slider .slider_block:first').fadeIn();
 
-	    $('.arrow-next').on('click',function(){
-
-	     if ($('.slider .slider_block:visible').is(':last')) {
-	      $('.slider .slider_block:visible').fadeOut();
-	      $('.slider .slider_block:first').fadeIn();
-	     }else {
-	      $('.slider .slider_block:visible').fadeOut(function(){
-	       $(this).next().fadeIn();
-	      });
-	     }
-
-	    });
-
-
-	    $('.arrow-prev').on('click',function(){
-	     if ($('.slider .slider_block:visible').is(':first')) {
-	      $('.slider .slider_block:visible').fadeOut();
-	      $('.slider .slider_block:last').fadeIn();
-	     }else {
-	      $('.slider .slider_block:visible').fadeOut(function(){
-	       $(this).prev().fadeIn();
-	      });
-	            
-	     }
-	    });
-
-	   });
-
+			$('.arrow-next').on('click',function(){
+			var tohide = false;
+			if ($('.slider .slider_block:visible').is(':last-child')) {
+					$('.slider .slider_block:visible').fadeOut();
+					$('.slider .slider_block:first').fadeIn();
+				} else {
+					to_hide = $('.slider .slider_block:visible');
+					to_hide.fadeOut();
+					$(to_hide).next().fadeIn();
+				}
+			});
+			$('.arrow-prev').on('click',function(){
+				if ($('.slider .slider_block:visible').is(':first-child')) {
+					$('.slider .slider_block:visible').fadeOut();
+					$('.slider .slider_block:last').fadeIn();
+				} else {
+					to_hide = $('.slider .slider_block:visible');
+					to_hide.fadeOut();
+					$(to_hide).prev().fadeIn();
+				}
+			});
+		});
 	  </script>
 	</body>
 </html>
